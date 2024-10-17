@@ -39,7 +39,7 @@ The program operates on a graph structure, where:
     - Runs over the vector of agents and runs Agent::step for each party.
         -  Agent::step :
             -  checks is the agent can suggest to its neighboring parties.
-            -  Sends suggestions to the neighboring parties according to the agent's SelectionPolicy.
+            -  Sends suggestion to a neighboring party according to the agent's SelectionPolicy.
 
 ## Installation & Usage
 
