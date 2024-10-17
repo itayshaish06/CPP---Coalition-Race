@@ -43,6 +43,47 @@ The program operates on a graph structure, where:
 
 ## Installation & Usage
 
+### 0. The makefile was written and tested on linux ubuntu.
+
 ### 1. Clone the Repository
    ```bash
-   git clone https://github.com/your-username/coalition-race-simulator.git
+   git clone https://github.com/itayshaish06/CPP-Coalition-Race.git
+   ```
+
+### 2. Compile the Project
+From the folder you cloned the project to, open the terminal and:
+   ```bash
+   make
+   ```
+
+### 3. Run the Program
+The simulator takes a JSON configuration file as input, which defines the parties, agents, and initial graph structure.
+   ```bash
+   bin/cRace path_to_config.json
+   ```
+for example:
+   ```bash
+   bin/cRace customTests/MandatesSelectionPolicy1.json
+   ```
+or use the script that runs 9 tests and compare them to solution out files:
+   ```bash
+   bash script.sh
+   ```
+### 4. Visualize the Results (Optional)
+Use the provided Python script to visualize the coalition formation process:
+install packeges:
+   ```bash
+   sudo apt-get install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk \libharfbuzz-dev libfribidi-dev libxcb1-dev
+   sudo apt-get install python3-pip
+   pip3 install networkx
+   pip3 install matplotlib
+   ```
+Run:
+   ```bash
+   python3 visualization.py path_to_output_file.json
+   ```
+for example:
+   ```bash
+   python3 visualization.py customTests/MandatesSelectionPolicy1.out
+   ```
+
